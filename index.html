@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/346a9444b4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+
+        <div class="container">
+            <nav>
+                <img src="images/SOC101_Portfolio_Guide.png" class="logo" >
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header_text">
+                <p><b><span>B.tech Student</span></b></p>
+                <h1>Hello, I'am <span>Digvijay Singh Tomar</span>........</h1>
+            </div>
+        </div>
+
+    </div>
+
+     <!------------------- About -------------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/digvijay.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me....</h1>
+                    <p class="sub-title1">Hello...<br> My name is <b>Digvijay Singh Tomar</b> from <b> Khargone</b>, MY hobby is Singing and Listening a Songs.</p>
+
+                    <div class="tab-titles">
+                    
+                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                         <p class="tab-links" onclick="opentab('education')">Education</p>
+                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Languages</span><br>C,C++,java.</li> 
+                            <li><span>Web Development</span><br>HTML,CSS,JavaScript.</li> 
+                            
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023 - current</span><br>Percieving <b>B.tech</b>(2<sup>nd</sup>Year) in <b>Computeer Science</b> Branch From <b><i>MEDI-CAPS UNIVERSITY</i></b> </li> 
+                            <li><span>2021</span><br>I have passed <b>12th</b> from <b>Govt.D.A.Excellence No.1 Khargone</b></li> 
+                            
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li>
+                                <span>2022 - August</span><br>I have worked in Engineering Virtual Program in <b>Goldman Sachs</b> which is conduct by <b>Forage</b>.
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+ <!------------------------- concact--------------------------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> contact@thakurdigvijaysinghtomargmail.com</p>
+                    <p><i class="fa-solid fa-phone-volume"></i> 7489759947</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/digvijay-singh-tomar-276598251/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+
+                    <a href="images/Portfolio Images.pdf" download class="btn btn2">Download</a>
+
+                    
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Enter Your Name" required>
+                        <input type="text" name="Email" placeholder="Enter Your Email" required>
+                        <textarea name="Message" rows="5" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>  
+        </div> 
+        <div class="copyright">
+            <p>Copyright THAKUR,Made with by <i class="fa-solid fa-heart"></i> DIGVIJAY SINGH</p>
+        </div>
+    </div>
+
+
+    <script>
+
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+    
+        function opentab(tabname){
+            for(tablink of tablinks){
+            
+                tablink.classList.remove("active-link");
+            }
+    
+            for(tabcontent of tabcontents){
+            
+            tabcontent.classList.remove("active-tab");
+            }
+    
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    
+    
+    </script> 
+
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+         
+        function openmenu(){
+            sidemenu.style.right = "0";
+            
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200";
+            
+        }
+
+    </script>
+
+     
+
+
+
+</body>
+</html>
